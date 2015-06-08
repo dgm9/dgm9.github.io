@@ -46,7 +46,7 @@
 <p>So here is a simple python script to try yourself. Note that Gm (the product of G and the mass of the sun) is known much more precisely than either G or m alone. Can you guess why? Imagine trying to measure one without the other!</p>
 <p>Also:</p>
 <img alt="figure_3.1" src="images/figi03point1w.png" />
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight"><pre> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="kn">as</span> <span class="nn">cm</span>
 <span class="kn">import</span> <span class="nn">math</span>
 
@@ -60,9 +60,9 @@
 
 <span class="c"># using vis-viva equation v^2 = Gm * (2./r - 1./a) (Wikipedia)</span>
 <span class="c"># (this is really just conservation of energy: Kinetic + Potential = const)</span>
-<span class="n">v_aphelion</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Gm</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">e</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.</span><span class="p">)</span> <span class="o">/</span> <span class="n">a</span><span class="p">)</span>  <span class="p">()</span>
+<span class="n">v_aphelion</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">Gm</span> <span class="o">*</span> <span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">e</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.</span><span class="p">)</span> <span class="o">/</span> <span class="n">a</span><span class="p">)</span>
 
-<span class="n">t_year</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">Gm</span><span class="p">)</span>  <span class="p">(</span><span class="n">Wikipedia</span><span class="p">)</span>
+<span class="n">t_year</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">Gm</span><span class="p">)</span>
 
 <span class="n">nstep</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c"># CHANGE THIS TO SEE WHAT HAPPENS!</span>
 
