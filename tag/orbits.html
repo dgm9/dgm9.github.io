@@ -104,7 +104,7 @@
     <span class="n">plot_it</span> <span class="o">=</span> <span class="bp">False</span>   <span class="c"># don&#39;t be silly!</span>
 </pre></div>
 <p>And the next zillion lines just make the plots.</p>
-<p>I've made it complex (which is at least better than complicated) to expose you to a number things that sooner or later we need to learn about python and matplotlib.</p>
+<p>I've made it complex (which is at least better than <a class="reference external" href="http://stackoverflow.com/questions/4568704/what-does-complex-is-better-than-complicated-mean">complicated</a>) to expose you to a number things that sooner or later we need to learn about python and matplotlib.</p>
 <div class="highlight"><pre><span class="k">if</span> <span class="n">plot_it</span><span class="p">:</span>
 
     <span class="n">r</span> <span class="o">=</span> <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="n">X</span><span class="p">]</span>
@@ -231,7 +231,7 @@
 <img alt="Figure_06" src="images/figi06.png" />
 <p>With 200 and 1000 steps, it's not quite dead - it's getting better, and it doesn't want to go on the cart. We know how that <a class="reference external" href="http://en.wikiquote.org/wiki/Monty_Python_and_the_Holy_Grail#Dialogue">story</a> ends - it's all down hill. But if we plot it, it's not really going down hill fast enough, especially if we want to start calculating more complicated things.</p>
 <img alt="Figure_07" src="images/figi07.png" />
-<p>Orbits with large eccentricity are much more demanding because the forces are changing quickly. An quick way to make the orbit elliptical is to just cut the intial velocity in half, and let the planet fall towards the sun. I'm too lazy to recalculate the theoretical period - you can do that 'for fun'. I'll just keep the same one earh theoretical year for this:</p>
+<p>Orbits with large eccentricity are much more demanding because the forces are changing quickly. A quick way to make the orbit elliptical is to just cut the intial velocity in half, and let the planet fall towards the sun. I'm too lazy to recalculate the theoretical period - you can do that 'for fun'. I'll just keep the same one earh theoretical year for this:</p>
 <img alt="Figure_08" src="images/figi08.png" />
 <div class="line-block">
 <div class="line"><br /></div>
