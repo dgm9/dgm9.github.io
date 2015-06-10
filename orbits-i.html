@@ -245,12 +245,12 @@
 <p>This method is fourth order, so the error (per step) is O(5). Since the number of steps must increase as step size decreases, we can expect the total error to drop as step size to the fourth power.</p>
 <img alt="Figure_10" src="images/figi10w.png" />
 <img alt="Figure_11" src="images/figi11w.png" />
-<p>A second, popular algorithm is the Runge-Kutta-Fehlberg or RK45. This method is also fourth order, but more accurate. It uses many more coeficeints and floating point operations per step, but with a few more calculations it provides a fifth order solution as well. This can be compared to estimate the approximate size of the error. This comparison can be used to adjust the step size dynamically, so time is not wasted “over-calculating”. But you have to think about how often and when you change the step size so that it makes sense for your calculation.</p>
-<img alt="Figure_12" src="images/figi12w.png" />
+<p>A second, popular algorithm is the Runge-Kutta-Fehlberg or RK45. This method is also fourth order, but more accurate. It uses many more coeficeints and floating point operations per step, but with a few more calculations it provides a fifth order solution as well. This can be compared to estimate the approximate size of the error. This comparison can be used to adjust the step size h dynamically, so time is not wasted “over-calculating”. But you have to think about how often and when you change the step size so that it makes sense for your calculation.</p>
+<img alt="Figure_12" src="images/figi12fixedw.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<img alt="Figure_13" src="images/figi13w.png" />
+<img alt="Figure_13" src="images/figi13fixedw.png" />
 <p>I won't give you all the coeifients (b<sub>i,j</sub> , c<sub>i</sub> , d<sub>i</sub>) because I don't want to be responsible for any errors. You'll have to look those up yourself.</p>
 <p>It converges much faster! For eccentric and unusual orbits, you should try to use an even higher order RK algorithm.  There are many to choose from!</p>
 <img alt="Figure_15" src="images/figi15.png" />
