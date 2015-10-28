@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>dgm9 (david mikolas) - PyCon material</title>
+        <title>dgm9 (david mikolas) - Orbits</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
         <link href="/" type="application/atom+xml" rel="alternate" title="dgm9 (david mikolas) ATOM Feed" />
@@ -28,8 +28,8 @@
 <time datetime="2015-06-02T00:00:00-04:00">Tue 02 June 2015</time>            </header>
 
             <article>
-                <img alt="newton" src="images/Newton_test_meme_resize2.png" />
-<img alt="newton" src="images/my_man_Isaac_Newton_y537MD.gif" />
+                <img alt="newton" src="/images/Newton_test_meme_resize2.png" />
+<img alt="newton" src="/images/my_man_Isaac_Newton_y537MD.gif" />
 <div class="section" id="so-that-s-my-man-isaac-newton">
 <h2><em>&quot;so... that's my man, Isaac Newton&quot;</em></h2>
 <p>Watch the video <a class="reference external" href="https://www.youtube.com/watch?v=danYFxGnFxQ">here</a>:  (English subtitles are available)</p>
@@ -38,14 +38,14 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<img alt="figure_1" src="images/figi01altw.png" />
+<img alt="figure_1" src="/images/figi01altw.png" />
 <p>Sometimes it’s easier to code if you just write it this way:</p>
-<img alt="figure_2" src="images/figi02w.png" />
+<img alt="figure_2" src="/images/figi02w.png" />
 <p>The simplest imaginable way to try to calculate orbits (with a computer) is probably just using finite differences:</p>
-<img alt="figure_3" src="images/figi03w.png" />
+<img alt="figure_3" src="/images/figi03w.png" />
 <p>So here is a simple python script to try yourself. Note that Gm (the product of G and the mass of the sun) is known much more precisely than either G or m alone. Can you guess why? Imagine trying to measure one without the other!</p>
 <p>Also:</p>
-<img alt="figure_3.1" src="images/figi03point1w.png" />
+<img alt="/figure_3.1" src="images/figi03point1w.png" />
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.cm</span> <span class="kn">as</span> <span class="nn">cm</span>
 <span class="kn">import</span> <span class="nn">math</span>
@@ -222,21 +222,21 @@
 <p>give the period of an orbit of 31558319.5 seconds, or about 365.25833 days. In reality, a year on earth is about 365.25636 days. This difference is probaly due to our simplifying assumption that the sun just sits in one place and the earth rotates around it. In reality the masses of the sun and earth are roughly 1.989E+30 and 5.972E+24 (Wikipedia) and if they were alone, the'd rotate around a common barycenter. You can see the difference in the year, and the ratio of the masses are both of the order 10E-06. But instead of looking at reduced mass yet, let's just see what happens.</p>
 <p>Here are some results. Distances are in meters, time in seconds, etc. The total time is the theoretical period (one year) based on the values used for Gm, e, and a, assuming the earth's mass is very small, and no other planets. If the calculation were correct, then the earth should return to exactly the same position after a period of time given by <em>t_year</em>.</p>
 <p>Color is used to represent time (from blue to red - indicated by arrow also). The plot on the left is the whole orbit (sun at one focus). The center plot is a zoom in on the starting position. On the right, the radial distance to the sun is plotted agatinst time. The horizontal lines indicate perihelion and aphelion.</p>
-<img alt="Figure_04" src="images/figi04.png" />
+<img alt="Figure_04" src="/images/figi04.png" />
 <p>In this first simulation (above) where only 50 time steps were used for an entire orbit, the results are obviously extremely bad. The earth doesn’t return to the same spot (center plot), and the variation of the distance to the sun (right plot) is right <a class="reference external" href="https://www.google.com.tw/search?q=five+is+right+out">out</a>! The &quot;gaps&quot; are the difference between initial and final values. Should be zero if we are orbiting correctly.</p>
-<img alt="Figure_05" src="images/figi05.png" />
+<img alt="Figure_05" src="/images/figi05.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<img alt="Figure_06" src="images/figi06.png" />
+<img alt="Figure_06" src="/images/figi06.png" />
 <p>With 200 and 1000 steps, it's not quite dead - it's getting better, and it doesn't want to go on the cart. We know how that <a class="reference external" href="http://en.wikiquote.org/wiki/Monty_Python_and_the_Holy_Grail#Dialogue">story</a> ends - it's all down hill. But if we plot it, it's not really going down hill fast enough, especially if we want to start calculating more complicated things.</p>
-<img alt="Figure_07" src="images/figi07.png" />
+<img alt="Figure_07" src="/images/figi07.png" />
 <p>Orbits with large eccentricity are much more demanding because the forces are changing quickly. A quick way to make the orbit elliptical is to just cut the intial velocity in half, and let the planet fall towards the sun. I'm too lazy to recalculate the theoretical period - you can do that 'for fun'. I'll just keep the same one earh theoretical year for this:</p>
-<img alt="Figure_08" src="images/figi08.png" />
+<img alt="Figure_08" src="/images/figi08.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<img alt="Figure_09" src="images/figi09.png" />
+<img alt="Figure_09" src="/images/figi09.png" />
 <p>So clearly the orbits aren't going to come even close. Luckily there are better methods that can be extended to generalized multibody problems.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -246,21 +246,21 @@
 <p>Newton did find some better ways to solve for the position of an object in an eliptical orbit as a function of time, but we’re going to do some more complicated calculations (multi-body, 3D) so let’s move on.</p>
 <p>Around 1900, Carl Runge and Martin Wilhelm Kutta developed a system for finding better algorithms for solving ODEs involving time-varying effects. (Wikipedia) This family is called Runge-Kutta algorithms. You can read about these everywhere. The simplest or most common is called RK4, or “THE” Runge-Kutta algorithm. Here it is implemented for simultaneous velocity and position expressions. The function a is “acceleration” (F/m). Be careful to note the x and v subscripts as they are written.</p>
 <p>This method is fourth order, so the error (per step) is O(5). Since the number of steps must increase as step size decreases, we can expect the total error to drop as step size to the fourth power.</p>
-<img alt="Figure_10" src="images/figi10w.png" />
-<img alt="Figure_11" src="images/figi11w.png" />
+<img alt="Figure_10" src="/images/figi10w.png" />
+<img alt="Figure_11" src="/images/figi11w.png" />
 <p>A second, popular algorithm is the Runge-Kutta-Fehlberg or RK45. This method is also fourth order, but more accurate. It uses many more coeficeints and floating point operations per step, but with a few more calculations it provides a fifth order solution as well. This can be compared to estimate the approximate size of the error. This comparison can be used to adjust the step size h dynamically, so time is not wasted “over-calculating”. But you have to think about how often and when you change the step size so that it makes sense for your calculation.</p>
-<img alt="Figure_12" src="images/figi12fixedw.png" />
+<img alt="Figure_12" src="/images/figi12fixedw.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<img alt="Figure_13" src="images/figi13fixedw.png" />
+<img alt="Figure_13" src="/images/figi13fixedw.png" />
 <p>I won't give you all the coeifients (b<sub>i,j</sub> , c<sub>i</sub> , d<sub>i</sub>) because I don't want to be responsible for any errors. You'll have to look those up yourself.</p>
 <p>It converges much faster! For eccentric and unusual orbits, you should try to use an even higher order RK algorithm.  There are many to choose from!</p>
-<img alt="Figure_15" src="images/figi15.png" />
+<img alt="Figure_15" src="/images/figi15.png" />
 <p>So we can see both methods are the same order of accuracy. Each step is O(5), and the total number of steps increases as the step size decreases, so the final error drops as step-size to the minus four power.  The RK45 method is about a factor of 10 more accurate. You may wonder why you might want to use it. You can get the same accuracy (at least in this example) with RK4 by using 10<sup>1/4</sup> , or about twice the nubmer of steps, which may be faster than using RK45 with roughly 5 times the number of floats and 50% more calls to the subroutine for acceleration. The benefit is that with just a few more floats, you can get the fifth order result as well, and use it to constantly check your accuracy.</p>
 <p>The value s can be used as a multiplicitave adjustment to the step size. If s consistently is much larger than one, the step size can be multiplied by s. If s is much less than one, then multiply the step size by s to decrease it an amount to bring the error back in to the same ballpark as tol. These are just guidelines, it needs some attention to decide if, and how best to use. You actually get SIX values for s (3 position, 3 velocity). One could be conservative and always use the smallest of the six.</p>
 <p>If you want to try it, the RK45 method (Runge-Kutta-Fehlberg) is very popular and you can read about it wherever ODEs are sold.</p>
-<img alt="Figure_14" src="images/figi14w.png" />
+<img alt="Figure_14" src="/images/figi14w.png" />
 </div>
 <div class="section" id="next">
 <h3>NEXT:</h3>
@@ -269,12 +269,21 @@
 </div>
 </div>
             </article>
+                <section id="article-list">
+                    <h2>Tous les articles</h2>
+                    <ol>
+        
+
+ 
+            <li><a href="/orbits-ii.html" rel="bookmark" title="Permalink to Orbits II">Orbits II</a></li>
+    </ol>
+    </section><!-- #article-list -->
 
         <footer>
             <nav>
                 <ul>
+                    <li><a href="/pages/useful-links.html">Useful Links</a></li>
                     <li>:: <a href="/categories.html">Categories</a></li>
-                    <li>:: <a href="/tags.html">Tags</a></li>
                 </ul>
             </nav>
                 <p id="theme-credit">Proudly powered by <a href="http://docs.notmyidea.org/alexis/pelican/">pelican</a></p>
